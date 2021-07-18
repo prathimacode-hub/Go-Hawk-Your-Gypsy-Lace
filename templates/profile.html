@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <!-- Load google map with visualization library -->
+  <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaVUPKfPPxYsYNJoWTn4nsb8R1pzE-h5Q&libraries=visualization&callback=initMap"></script>
+  {% endblock %}
+
+{% block body %}
+  <section class="h-100 mx-3 full-columns">
+    <div class="row" style="height: 10px">
+    </div>
+    <div class="row">
+      <div class="col-4">
+       <h3>Hello, {{user.fname}} {{user.lname}}!</h3> 
+      </div>
+      <div class="col-6">
+      </div>
+      <div class="col-2">
+        {% if user.staff_user == True %}
+          <div id="dashboard">
+            <form action="/dashboard">
+                <input type="submit" value="View Internal Dashboard">
+            </form>
+          </div>
+        {% endif %}
+      </div>
+    </div> 
+    
+    <div class="row h-100">
+      <main class="col h-100 overflow-y">
+        <div class="container py-4 content">
+        
+          <div id="maplist">
+            <h2>Your Maps</h2>
+            {% if maps == [] %}
+              <p>You don't have any maps yet. Click the "Make New Map" button to get started</p>
+            {% else %}
+              {% for map in maps %}
+                  <a href="/map/{{ map.map_id }}">{{ map.map_name }}</a><br>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <br>
+          <div id="make_new_map">
+
+          <button type="button" class="get-shareable-link" data-toggle="modal" data-target="#make-map-modal">Make New Map
+          </button>
+          </div>
+        </div>
+      </main> 
+
+      <aside class="col-8 h-100 bg-light d-flex justify-content-center">
+        <div class="container my-4">
+          <h2 id="dashboard-header">Heat Map of Your Saved Places</h2>
+          <div id="map-profile-page">
+            <div id="map"></div>
+          </div>
+        </div>
+      </aside>
+
+    </div>    
+ </section> 
+
+   <!-- Div for modal -->
+  <div class="modal fade" id="make-map-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Make New Map</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/make_map_process">
+            Map Name: <input type="text" class="form-control" name="map_name"><br>
+            Map Description: <input type="text" class="form-control" name="map_description"><br>
+            <div class="modal-footer">
+               <input type="submit" value="Submit"><br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 1.75, // display whole world
+      center: {lat: 17, lng: 21.017532}, //center on Poland, make sure far north and south are visible
+      mapTypeId: 'satellite'
+    });
+
+    //Get latitude and longitude from all places saved to db, render points on heatmap
+    $.get("/get_latitude_and_longitude_for_one_user.json", function (data) {
+      points = []
+      for (place of data) {
+        console.log(place.latitude)
+        console.log(place.longitude)
+        points.push(new google.maps.LatLng(place.latitude, place.longitude));
+      }
+
+      var heatmap = new google.maps.visualization.HeatmapLayer({
+        data: points,
+        map: map
+      });
+    });
+  };
+
+ </script>
+
+{% endblock %}
