@@ -1,0 +1,209 @@
+ul {
+  font-size: 12px;
+}
+
+h3.map-header {
+  font-size: 18px;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a.place-name {
+  font-size: 15px;
+  font-style: bold;
+  color: black;
+}
+
+#place-name-header {
+  font-size: 14px;
+  font-style: bold;
+}
+
+#marker_heading {
+  font-size: 16px;
+}
+#marker_attribute {
+  font-size: 14px
+  font-style: bold;
+}
+
+#dashboard-header {
+  font-size: 16px;
+  font-style: bold;
+}
+
+#dashboard-par-header {
+  font-size: 14px;
+  font-style: bold;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1494679431452-d4f4a03d0004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-y {
+  overflow-y: auto !important;
+}
+
+.content {
+  margin-bottom: 25% !important;
+}
+
+#share-on-fb {
+  height: 100;
+}
+
+#map-profile-page {
+  height: 90%;
+}
+
+#share-on-twitter{
+  width: 100px;
+  float:left;
+  margin-top: 3px;
+}
+
+#spacer-div {
+  height: 180px;
+  width: 60px;
+}
+
+/*Index css code*/
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+h1.h1-responsive {
+  letter-spacing: 8px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+/*End index css code*/
+
+h1, h2, h3, h4, h5, p  {
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+table  {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.small-par {
+  font-size: 12px;
+}
+
+/*Google maps search box CSS*/
+#map {
+  height: 90%;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+/*end google maps css*/
