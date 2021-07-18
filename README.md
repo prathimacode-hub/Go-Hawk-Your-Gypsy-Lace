@@ -10,7 +10,7 @@ It's the perfect hack to get travel recommendation and itineraries for users to 
 This inspiration we had drawn from the travel bug we had been bitten
 
 ## What it Does?❓❗
-This project is titled as "Go Hawk Your Gypsy Lace". Go Hawk Your Gypsy Lace** is a complete web app which allows users to share travel recommendations and itineraries. Not only does it focuses on sharing but as well provide dynamic maps with pointers to recommend the place and add specific notes on the selected places. Users can share this read-only version of their maps across the web via a map-specific url that contains a cryptographic hash. An enclosed internal dashboard gathers all the data about trends across all users, such as popular travel destinations and recommended places, and displays the data on 2 charts and a heat map. This application is 94% tested using Python.
+This project is titled as "Go Hawk Your Gypsy Lace". **Go Hawk Your Gypsy Lace** is a complete web app which allows users to share travel recommendations and itineraries. Not only does it focuses on sharing but as well provide dynamic maps with pointers to recommend the place and add specific notes on the selected places. Users can share this read-only version of their maps across the web via a map-specific url that contains a cryptographic hash. An enclosed internal dashboard gathers all the data about trends across all users, such as popular travel destinations and recommended places, and displays the data on 2 charts and a heat map. This application is 94% tested using Python.
 
 ## How we built it? 💻
 We built it using python, html, css, javascript. It was complete a wholesome learning package to learnt and implement. We had to add many dependencies and libraries for it to turn functional
