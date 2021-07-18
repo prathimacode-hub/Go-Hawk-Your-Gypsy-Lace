@@ -1,7 +1,7 @@
 # Go-Hawk-Your-Gypsy-Lace
 
 ## Aim 👍
-This project is about getting your way into nostalgic ride of planning your own customzied travels according to your taste. Immerse into this experience.
+This project is about getting your way into nostalgic ride of planning your own customized travels according to your taste. Immerse into this experience.
 
 ## Purpose 💡
 It's the perfect hack to get travel recommendation and itineraries for users to plan their trips
