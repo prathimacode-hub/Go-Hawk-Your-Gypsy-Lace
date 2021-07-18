@@ -30,7 +30,7 @@ We are proud of what we had done. We did not know we could bring this on to the 
 ## What we learned👨🏻‍🎓
 Travel is something i adore a lot. The main reason to join this hackathon, to learning an abundant stack of knowledge be it advanced python, using html, css and javascript. To bring in maps, adding up google api's and place id's and what not, I didn't know these all even exist to make websites work.
 
-## What's next for Toonslate Gigs💦
+## What's next for Go Hawk Your Gypsy Lace💦
  This project might add many more features like predicting moods and showing recommendations also users previous interests to give intineraries.
  
 ## Team 🙌
